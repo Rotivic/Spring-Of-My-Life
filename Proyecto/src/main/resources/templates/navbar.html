@@ -1,0 +1,99 @@
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark mb-3" th:fragment="header">
+        <div class="container-fluid">
+          <a class="navbar-brand" th:href="'@{}'">Banco Alguno</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse bg-dark" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            	
+         
+              <li class="nav-item dropdown bg-dark">
+		          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+		            <i class="fa-solid fa-users"></i>
+		            Clientes
+		          </a>
+		          <ul class="dropdown-menu bg-dark" aria-labelledby="navbarDropdown">
+		             <li><a class="dropdown-item" th:href="@{/UsuariosView}">Listar Clientes</a></li>
+		             <li><hr class="dropdown-divider"></li>		
+		             <li><a class="dropdown-item" th:href="@{/addCliente}">Añadir Clientes</a></li>
+		           	 <li><hr class="dropdown-divider"></li>	  
+		           	 <li><a class="dropdown-item" th:href="@{/delAccountByUser}">Eliminar cuenta</a></li>
+		          </ul>
+       		 </li>
+       		
+              <li class="nav-item dropdown">
+                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+		            <i class="fa-solid fa-piggy-bank"></i>
+		            Cuentas
+		          </a>
+		          <ul class="dropdown-menu bg-dark" aria-labelledby="navbarDropdown">
+		             <li><a class="dropdown-item" th:href="@{/CuentasView}">Listado</a></li>
+		             <li><hr class="dropdown-divider"></li>		
+		             <li><a class="dropdown-item" th:href="@{/newCuentasUserView}">Nueva cuenta</a></li>
+		           	 <li><hr class="dropdown-divider"></li>	  
+		           	 <li><a class="dropdown-item" th:href="@{/delTitular}">Eliminar titulares</a></li>
+		           	 <li><hr class="dropdown-divider"></li>	  
+		           	 <li><a class="dropdown-item" th:href="@{/addTitular}">Añadir titulares</a></li>
+		          </ul>
+              </li>
+              <li class="nav-item dropdown">
+                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+		            <i class="fa-solid fa-file-invoice-dollar"></i>
+		            Operaciones
+		          </a>
+		          <ul class="dropdown-menu bg-dark" aria-labelledby="navbarDropdown">
+		             <li><a class="dropdown-item" th:href="@{/OperacionView}">Listado de operaciones</a></li>
+		             <li><hr class="dropdown-divider"></li>		
+		             <li><a class="dropdown-item" th:href="@{/MakeOperations}">Ingreso/Retirada de una cuenta</a></li>
+		           	 <li><hr class="dropdown-divider"></li>	  
+		           	 <li><a class="dropdown-item" th:href="@{/transactionAccount}">Transaccion entre cuentas</a></li>
+		          </ul>
+              </li>
+           
+            </ul>
+           
+          </div>
+        </div>
+      </nav>
+    
+<!--
+  <nav class="navbar" th:fragment="header">
+        <a href="#">
+          <img th:src="@{img/logo.png}" alt="logo">
+          Banco Alguno
+        </a>
+      
+        <div class="dropdown">
+	        <button class="dropbtn" >  <i class="fa-solid fa-users"></i> Clientes
+	          <i class="fa fa-caret-down"></i>
+	        </button>
+	        <div class="dropdown-content" id="myDropdown1">
+	          <a th:href="@{/UsuariosView}">Listar Clientes</a>
+	          <a th:href="@{/addCliente}">Añadir Clientes</a>
+	          <a th:href="@{/delAccountByUser}">Eliminar cuenta</a>
+	        </div>
+        </div>  
+         <div class="dropdown">
+	        <button class="dropbtn" >  <i class="fa-solid fa-piggy-bank"></i> Cuentas
+	          <i class="fa fa-caret-down"></i>
+	        </button>
+	        <div class="dropdown-content" id="myDropdown2">
+	          <a th:href="@{/CuentasView}">Listado</a>
+	          <a th:href="@{/newCuentasUserView}">Nueva cuenta</a>
+	          <a th:href="@{/delTitular}">Eliminar titulares</a>
+	        </div>
+        </div>     
+        <div class="dropdown">
+	        <button class="dropbtn" ><i class="fa-solid fa-file-invoice-dollar"></i> Operaciones
+	          <i class="fa fa-caret-down"></i>
+	        </button>
+	        <div class="dropdown-content" id="myDropdown3">
+	          <a th:href="@{/OperacionView}">Listado de operaciones</a>
+	          <a th:href="@{/MakeOperations}">Ingreso/Retirada de una cuenta</a>
+	          <a th:href="@{/transactionAccount}">Transaccion entre cuentas</a>
+	        </div>
+        </div> 
+   </nav>
+   -->

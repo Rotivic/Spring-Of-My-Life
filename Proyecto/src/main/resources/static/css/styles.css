@@ -1,0 +1,163 @@
+
+* {
+    --main-color: #000000;
+    --sec-color: #A31621;
+    --third-color: #808782;
+    --forth-color: #FAFAFF;
+}
+
+
+.error:focus {
+    border-color: #ff0000;
+}
+
+.cuerpo_externo {
+    height: 100vh;
+    background-color: #212529!important;
+    padding: 2%;
+    border-radius: 15px;
+    margin-bottom:5%;
+}
+
+.cuerpo_interno {
+    height: 100%;
+}
+
+.contenedor {
+    display: grid;
+    border-radius: 20px;
+    background-color: aliceblue;
+    height: 70%;
+    align-content: center;
+}
+
+.interno {
+    justify-self: center;
+    width: 80%;
+}
+
+table{
+	border:outset;
+}
+
+.btn-primary:hover {
+    color: #1b6ec2 !important;
+    background-color: #fff !important;
+    border-color: #1861ac !important;
+    transition-duration: 0.5s;
+    text-shadow: 0px 0px 1px #1b6ec2 !important;
+}
+
+.btn-danger:hover {
+    color: #dc3545 !important;
+    background-color: #fff !important;
+    border-color: #dc3545 !important;
+    transition-duration: 0.75s;
+    text-shadow: 0px 0px 1px #dc3545!important;
+}
+
+.btn-info:hover {
+    color: #17a2b8 !important;
+    background-color: #fff !important;
+    border-color: #17a2b8 !important;
+    transition-duration: 0.5s;
+    text-shadow: 0px 0px 1px #17a2b8 !important;
+}
+
+.btn-secondary:hover {
+    color: #6c757d !important;
+    background-color: #fff;
+    border-color: #6c757d;
+    transition-duration: 0.5s;
+    text-shadow: 0px 0px 1px #6c757d !important;
+}
+
+.btn-warning:hover{
+	 color: #ffc107 !important;
+    background-color: #fff !important;
+    border-color: #ffc107;
+    transition-duration: 0.5s;
+    text-shadow: 0px 0px 1px #6c757d !important;
+	
+}
+
+.titulo_centrado {
+    color: aliceblue!important;
+    text-shadow: -3px -2px 4px black;
+}
+
+header {
+    position: sticky;
+   
+    top: 0px;
+    z-index:100;
+}
+
+nav {
+    background-color: var(--main-color) !important;
+    box-shadow: 5px 5px 15px 2px rgba(0,0,0,0.65);
+        top: 0px !important;
+    position: sticky !important;
+}
+
+
+
+a {
+    color: lightgray !important;
+   
+  
+}
+
+a:hover {
+        color: aliceblue !important;
+        text-shadow: 0px 0px 1px white;
+        transition-duration: 0.5s;
+}
+
+
+.navbar-brand{
+    font-family:'Comic Sans MS';
+    font-size: 25px;
+    font-weight:bold;
+}
+
+.btn-group > .btn{
+    z-index:5;
+}
+
+.dropdown-menu {
+    background-color: #117a8b;
+}
+
+.dropdown-item:hover {
+    background-color: #117a8b !important;
+    color: white !important;
+    text-shadow: 0px 0px 1px white !important;
+    transition-duration: 0.1s;
+}
+
+
+body {
+    background-image: url("https://image.freepik.com/vector-gratis/patron-seguro-banco-transparente-sobre-fondo-oscuro-diseno-creativo-icono-caja-fuerte-banco-puede-utilizar-papel-tapiz-fondo-pagina-web-textil-impresion-ui-ux_159242-3053.jpg");
+}
+
+.paddeo{
+    padding-top: 2%;
+    text-align:center;
+}
+
+.flexi-cards {
+    justify-content: space-evenly;
+    display: flex;
+}
+
+.abs-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 50%;
+}
+
+.form {
+    width: 450px;
+}

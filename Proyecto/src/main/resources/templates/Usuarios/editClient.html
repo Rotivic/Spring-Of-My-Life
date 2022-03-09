@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   <link th:href="@{/css/styles.css}" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"/>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/js/all.min.js"></script>    
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	
+</head>
+<body>
+
+    <div th:replace="navbar :: header"></div>
+    
+      <div class="container cuerpo_externo">
+    
+     <main class="cuerpo_interno d-flex align-items-center">
+    
+	    	<div class="row d-flex justify-content-center mt-3">
+	    	<h1 class="titulo_centrado text-center">Edición de cliente</h1>
+		    	<div class="col-6 ">
+		    		<form  th:action="@{/updateClient}" th:object="${updClient}" method="POST" class="row g-3 needs-validation" novalidate>
+						
+							<input type="text" name="id" hidden th:value="${cliente.id}"/>
+							 <div class="col-md-6">
+							    <label for="validationCustom01" class="form-label titulo_centrado">NIF</label>
+							    <input type="text" class="form-control" id="validationCustom01" th:value="${cliente.nif}" pattern="[0-9]{8}[A-Za-z]{1}" name="nif" value="" placeholder="Ej: 12345672L" required>
+				   				 <div class="valid-feedback">
+				     				<b> NIF válido </b><i class="fa-solid fa-thumbs-up"></i>
+				   				 </div>
+				   				 <div class="invalid-feedback">
+							        <b> El NIF no puede estar vacio o ser inválido</b> <i class="fa-solid fa-thumbs-down"></i>
+							     </div>
+			  				</div>
+						  <div class="col-md-6">
+						    <label for="validationCustom02" class="form-label titulo_centrado">Nombre</label>
+						    <input type="text" class="form-control" th:value="${cliente.nombre}" id="validationCustom02" name="nombre" value="" required>
+						    <div class="valid-feedback">
+				     				<b> Nombre válido </b><i class="fa-solid fa-thumbs-up"></i>
+				   				 </div>
+				   				 <div class="invalid-feedback">
+							        <b> El nombre no puede estar vacio o ser un número</b> <i class="fa-solid fa-thumbs-down"></i>
+							     </div>
+						  </div>
+						
+						  <div class="col-md-6">
+						    <label for="validationCustom03" class="form-label titulo_centrado">Apellidos</label>
+						    <input type="text" class="form-control" th:value="${cliente.apellidos}" id="validationCustom03" name="apellidos" required>
+						     <div class="valid-feedback">
+				     				<b> Apellidos válido </b><i class="fa-solid fa-thumbs-up"></i>
+				   				 </div>
+				   				 <div class="invalid-feedback">
+							        <b> El apellido no puede estar vacio o ser un número</b> <i class="fa-solid fa-thumbs-down"></i>
+							     </div>
+						  </div>
+						  <div class="col-md-6">
+						    <label for="validationCustomUsername" class="form-label titulo_centrado">Email</label>
+						    <div class="input-group has-validation">
+						      <span class="input-group-text" id="inputGroupPrepend">@</span>
+						      <input type="text" class="form-control" th:value="${cliente.email}" id="validationCustomUsername" aria-describedby="inputGroupPrepend" name="email" required>
+						       <div class="valid-feedback">
+				     				<b> Email válido </b><i class="fa-solid fa-thumbs-up"></i>
+				   				 </div>
+				   				 <div class="invalid-feedback">
+							        <b> El email no puede estar vacio o ser inválido</b> <i class="fa-solid fa-thumbs-down"></i>
+							     </div>
+						    </div>
+						  </div>
+						  
+						  <div class="col-md-4">
+						    <label for="validationCustom03" class="form-label titulo_centrado">Direccion</label>
+						    <input type="text" class="form-control" id="validationCustom03" th:value="${cliente.direccion}" name="direccion" required>
+						    <div class="valid-feedback">
+				     				<b> Ciudad válida </b><i class="fa-solid fa-thumbs-up"></i>
+				   				 </div>
+				   				 <div class="invalid-feedback">
+							        <b> La ciudad no puede estar vacia o ser inválida</b> <i class="fa-solid fa-thumbs-down"></i>
+							     </div>
+						  </div>
+						   <div class="col-md-4">
+						    <label for="validationCustom03" class="form-label titulo_centrado">Teléfono</label>
+						    <input type="text" class="form-control" id="validationCustom03" th:value="${cliente.tlf}" name="tlf" required>
+						    <div class="valid-feedback">
+				     				<b> Teléfono válido </b><i class="fa-solid fa-thumbs-up"></i>
+				   			</div>
+				   			<div class="invalid-feedback">
+							        <b> El teléfono no puede estar vacio o ser texto</b> <i class="fa-solid fa-thumbs-down"></i>
+							</div>
+						  </div>
+						  <div class="col-md-4">
+						    <label for="validationCustom05" class="form-label titulo_centrado">Fecha</label>
+						    <input type="date" class="form-control" id="validationCustom05" th:value="${cliente.anioNac}" name="anioNac" required>
+						     <div class="valid-feedback">
+				     				<b> Fecha válida </b><i class="fa-solid fa-thumbs-up"></i>
+				   				 </div>
+				   				 <div class="invalid-feedback">
+							        <b> La fecha no puede estar vacia</b> <i class="fa-solid fa-thumbs-down"></i>
+							     </div>
+						  </div>
+						
+						  <div class="col-12">
+						    <button type="submit" name="btnAddCar" class="btn btn-primary">Añadir</button>
+						  </div>
+					</form>
+		    	</div>
+		    </main>	
+    	</div>
+    	
+    </div>
+   
+    <script>
+    
+    	
+    
+		// Example starter JavaScript for disabling form submissions if there are invalid fields
+		(function () {
+		  'use strict'
+		
+		  // Fetch all the forms we want to apply custom Bootstrap validation styles to
+		  var forms = document.querySelectorAll('.needs-validation')
+		
+		  // Loop over them and prevent submission
+		  Array.prototype.slice.call(forms)
+		    .forEach(function (form) {
+			
+				
+			
+		      form.addEventListener('submit', function (event) {
+				
+				console.log(pattern.test(form[0].value))
+				
+		        if (!form.checkValidity() ) {
+		          event.preventDefault()
+		          event.stopPropagation()
+		        }
+		
+		        form.classList.add('was-validated')
+		      }, false)
+		    })
+		})()
+
+    </script>
+    
+</body>
+</html>
